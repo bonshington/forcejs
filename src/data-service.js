@@ -727,7 +727,7 @@ class ForceServiceWeb extends ForceService {
             };
 
             xhr.open("POST", url, true);
-            if (!this.useProxy) {
+            if (this.useProxy) {
                 xhr.setRequestHeader("Target-URL", this.loginURL);
             }
             xhr.send();
