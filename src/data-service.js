@@ -718,7 +718,7 @@ class ForceServiceWeb extends ForceService {
                         console.log("Token refreshed");
                         let res = JSON.parse(xhr.responseText);
                         this.accessToken = res.access_token;
-                        resolve();
+                        resolve(this);
                     } else {
                         console.log("Error while trying to refresh token: " + xhr.responseText);
                         reject();
